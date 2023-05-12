@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Wit &amp; Wisdom of Matt Beckenham</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+
+    <style type="text/css">
+      /* cyrillic-ext */
+      @font-face {
+        font-family: "Merriweather";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf1jvzDP3WGO5g.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      /* cyrillic */
+      @font-face {
+        font-family: "Merriweather";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf8jvzDP3WGO5g.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      /* vietnamese */
+      @font-face {
+        font-family: "Merriweather";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf3jvzDP3WGO5g.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309,
+          U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: "Merriweather";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf2jvzDP3WGO5g.woff2)
+          format("woff2");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: "Merriweather";
+        font-style: italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7NWPf4jvzDP3WG.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      div,
+      body {
+        font-family: "Merriweather", serif;
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      html {
+        height: 100%;
+      }
+
+      html {
+        background: url(stripe.png) repeat;
+      }
+      #behemoth {
+        background: url(spotlight.png) no-repeat 22px 0;
+        width: 1007px;
+        float: left;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+      }
+
+      #behemoth > img {
+        display: block;
+        max-height: 90vh;
+      }
+      #quote {
+        position: absolute;
+        top: 0;
+        right: 100px;
+      }
+      .wrapping {
+        float: left;
+        width: 100%;
+        position: relative;
+        height: 100%;
+        background: url(trans-shadow-sq.png) repeat;
+      }
+      #qbanner {
+        background: url(waw-banner.png) no-repeat;
+        display: flex;
+        flex-direction: column;
+        height: 418px;
+        width: 706px;
+        padding: 280px 20px 20px 20px;
+      }
+      #quote p {
+        font-size: 50px;
+        text-align: center;
+        -webkit-transform: rotate(4deg);
+        color: #555a79;
+      }
+
+      .generate {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        margin-block-end: 2rem;
+        margin-inline: auto;
+        margin-top: auto;
+        position: relative;
+        width: 60px;
+        transition: background-color 0.4s;
+      }
+
+      .generate:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      .generate:active {
+        background-color: rgb(29, 154, 223);
+      }
+
+      .generate > svg {
+        fill: #616685;
+        transition: fill 0.4s;
+      }
+
+      .generate:hover > svg {
+        fill: #ec5d5d;
+      }
+
+      .generate:active > svg {
+        fill: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapping">
+      <div id="behemoth">
+        <img src="the-behemoth-head.gif" />
+      </div>
+
+      <div id="quote">
+        <div id="qbanner">
+          <blockquote>
+            <p id="quotes"></p>
+          </blockquote>
+          <button id="generate" class="generate">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#616685"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const generateQuote = function () {
+        const quotes = [
+          {
+            quote: "Easy Tiger!",
+          },
+          {
+            quote: "You've got me all wrong.",
+          },
+          {
+            quote: "Forget it.",
+          },
+          {
+            quote: "I had a cheek and nut incident.",
+          },
+          {
+            quote: "Just move some money around.",
+          },
+          {
+            quote: "Just to clarify ...",
+          },
+          {
+            quote: "Ahhhh - I'm joking!",
+          },
+          {
+            quote: "I can't believe you think I'm a wide boy.",
+          },
+          {
+            quote: "You're going to see the real me from now on.",
+          },
+          {
+            quote:
+              "I like to think I bring a bit of professionalism to the company.",
+          },
+          {
+            quote: "Do you boys like sardines?",
+          },
+          {
+            quote: "I think of myself as a morally decent person. Generally.",
+          },
+        ];
+
+        let arrayIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quotes").innerHTML = quotes[arrayIndex].quote;
+      };
+      window.onload = function () {
+        generateQuote();
+        document
+          .getElementById("generate")
+          .addEventListener("click", generateQuote);
+      };
+    </script>
+  </body>
+</html>
